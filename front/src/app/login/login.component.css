@@ -74,8 +74,14 @@ body {
     color: #fff;
 }
 
+.formulario .botoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px; /* Espaçamento de 3px entre os botões */
+}
+
 .formulario button {
-    width: 100%;
+    width: 50%;
     height: 45px;
     background-color: navy;
     border: none;
