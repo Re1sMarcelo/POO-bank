@@ -14,4 +14,8 @@ export class LoginComponent {
   logar() {
     this.router.navigate(['/tela-inicial'])
   }
+
+  cadastrar() {
+    this.router.navigate(['/tela-cadastro'])
+  }
 }
