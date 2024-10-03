@@ -6,7 +6,7 @@
     <div class="saldo">
         <h2>Saldo da Conta</h2>
         <p>R$ 1.000,00</p> 
-        <button>Extrato</button>
+        <button type="button" (click)="extrato()">Extrato</button>
     </div>
     <div class="caixa">
         <div class="operacoes">
@@ -15,7 +15,7 @@
                 <img src="investir.png" alt="logo investimentos" class="logo__imagem">
                 Investir
             </button>
-            <button class="operacoes__botao">
+            <button class="operacoes__botao" type="button">
                 <img src="pix.png" alt="logo pix" class="logo__imagem">
                 Pix
             </button>

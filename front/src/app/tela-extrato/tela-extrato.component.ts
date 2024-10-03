@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-tela-extrato',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './tela-extrato.component.css'
 })
 export class TelaExtratoComponent {
-
+    
 }

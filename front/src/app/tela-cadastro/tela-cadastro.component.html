@@ -1,1 +1,9 @@
-<h1>Faça seu cadastro</h1>
+<div class="telacadastro">
+    <h1 class="titulo">Faça seu cadastro</h1>
+    <div class="form-container">
+        <input pInputText type="text" [(ngModel)]="dadosCadastrais.nome" class="campo__cadastro" placeholder="NOME">  
+        <input pInputText type="text" [(ngModel)]="dadosCadastrais.cpf_cnpj" class="campo__cadastro" placeholder="CPF/CNPJ">
+        <input pInputText type="text" [(ngModel)]="dadosCadastrais.senha" class="campo__cadastro" placeholder="SENHA">
+        <button pButton (click)="clickSalvar()" class="campo__cadastro__salvar">Cadastrar</button>
+    </div>
+</div>

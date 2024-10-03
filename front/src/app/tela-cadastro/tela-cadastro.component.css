@@ -1,0 +1,64 @@
+/* Estilo para o título */
+
+.titulo {
+    color: blue;
+    text-align: center;
+    margin-top: 50px; /* Espaçamento superior */
+    font-size: 40px;
+}
+
+/* Contêiner para centralizar o formulário */
+.form-container {
+    display: flex;
+    flex-direction: column; /* Coloca os elementos um abaixo do outro */
+    align-items: center; /* Centraliza horizontalmente */
+    margin: 50px auto; /* Centraliza verticalmente */
+    width: 300px; /* Largura do contêiner */
+}
+
+/* Estilo para os campos de input */
+.campo__cadastro {
+    width: 100%;
+    margin: 10px 0; /* Espaçamento vertical entre os campos */
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid;
+    border-color: blue;
+}
+
+/* Estilo para o botão */
+.campo__cadastro__salvar {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: yellow; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilo para o botão */
+.campo__cadastro__salvar {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 22px;
+    background-color: yellow; /* Cor de fundo */
+    color: blue; /* Cor do texto */
+    border: none;
+    cursor: pointer;
+    
+    /* Centralizando o texto dentro do botão */
+    display: flex; /* Usa flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    text-align: center;
+    
+}
+
+.campo__cadastro__salvar:hover {
+    background-color: rgb(168, 179, 27);
+    color: rgb(0, 140, 255);
+}
+
