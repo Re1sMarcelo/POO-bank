@@ -10,5 +10,6 @@ export const routes: Routes = [
     { path: 'tela-inicial', component: TelaInicialComponent},
     { path: 'tela-cadastro', component: CadastroComponent},
     { path: 'tela-extrato', component: TelaExtratoComponent},
-    { path: 'tela-pix', component: TelaPixComponent}
+    { path: 'tela-pix', component: TelaPixComponent},
+    {path: 'tela-login', component: LoginComponent}
 ];

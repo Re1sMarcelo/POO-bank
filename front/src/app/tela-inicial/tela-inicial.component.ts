@@ -19,4 +19,8 @@ export class TelaInicialComponent {
   pix() {
     this.router.navigate(['/tela-pix'])
   }
+
+  sair() {
+    this.router.navigate(['/tela-login'])
+  }
 }

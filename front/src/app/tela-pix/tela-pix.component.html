@@ -6,6 +6,23 @@
     </button>
 </header>
 
+<div class="nova-caixa">
+    <div class="nova-caixa__title">
+        <i class="pi pi-money-bill" style="font-size: 2rem; margin-right: 10px;"></i>
+        <span class="nova-caixa__description">Pagar ou transferir</span>
+    </div>
+    <div class="card flex justify-content-center">
+        <p-floatLabel>
+            <input pInputText type="text" [(ngModel)]="dadosCadastrais.chave_pix" />
+            <label for="username">Chave pix ou Copia e cola</label>
+        </p-floatLabel>
+    </div>
+    <div class="minhas-chaves">
+        <i class="pi pi-key" style="font-size: 2rem; margin-right: 10px;"></i>
+        <span class="minhas-chaves__description">Minhas chaves</span>
+    </div>
+</div>
+
 <div class="pix-area">
     <h2 class="pix-area__title">Movimentações</h2>
     <div class="pix-area__item">
@@ -24,4 +41,3 @@
         <span class="pix-area__date">21/08/2024 às 15h51</span>
     </div>
 </div>
-

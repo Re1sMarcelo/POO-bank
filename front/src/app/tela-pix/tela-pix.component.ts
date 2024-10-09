@@ -1,18 +1,28 @@
 import { Component } from '@angular/core';
-import { Route, Router } from '@angular/router';
-
+import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms'; // Para o ngModel
+import { ButtonModule } from 'primeng/button';
+import { InputTextModule } from 'primeng/inputtext';
+import { FloatLabelModule } from 'primeng/floatlabel'; // Importar FloatLabelModule
+import { Correntista } from '../model/correntista';
+import { CorrentistaService } from '../correntista.service';
 
 @Component({
   selector: 'app-tela-pix', 
   standalone: true,
-  imports: [],
+  imports: [ButtonModule, InputTextModule, FormsModule, FloatLabelModule], // Adicionar FloatLabelModule
   templateUrl: './tela-pix.component.html',
-  styleUrl: './tela-pix.component.css'
+  styleUrls: ['./tela-pix.component.css'] // Corrigir para styleUrls
 })
 export class TelaPixComponent {
-  constructor(private router:Router){}
+  dadosCadastrais = new Correntista();
 
-  voltar (){
-    this.router.navigate(['/tela-inicial'])
+  constructor(
+    private service: CorrentistaService,
+    private router: Router
+  ) {}
+
+  voltar() {
+    this.router.navigate(['/tela-inicial']);
   }
 }

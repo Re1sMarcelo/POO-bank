@@ -1,14 +1,22 @@
-@import "primeicons/primeicons.css";
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+}
 
 .cabecalho {
-    font-family: "Oswald", sans-serif;
     width: 100%;
     height: 130px;
     color: white;
     background-color: rgb(18, 18, 158);
     display: flex;
+    align-items: center;
     padding-left: 20px;
     position: relative;
+    box-sizing: border-box;
 }
 
 .cabecalho__logo {
@@ -21,7 +29,7 @@
 }
 
 .cabecalho__conteudo {
-    margin-left: 45%;
+    margin-left: 47%;
     font-size: 40px;
     margin-top: 40px;
 }
@@ -30,9 +38,9 @@
     background-color: rgb(18, 18, 158);
     border: none;
     color: #fff;
-    font-size: 32px; /* Aumenta o tamanho do ícone e texto */
-    padding: 15px 30px; /* Aumenta o espaçamento interno do botão */
-    border-radius: 5px; /* Arredonda os cantos do botão */
+    font-size: 32px;
+    padding: 15px 30px;
+    border-radius: 5px;
     cursor: pointer;
     position: absolute;
     right: 20px;
@@ -41,58 +49,161 @@
     transition: background-color 0.3s, transform 0.3s;
 }
 
-/* Efeito de hover */
 .cabecalho__conteudo__botao:hover {
     background-color: rgba(255, 255, 255, 0.1);
     transform: translateY(-50%) scale(1.05);
     color: yellow;
 }
 
+.card {
+    display: flex;
+    flex-direction: column; /* Alinha o conteúdo em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    width: 100%; /* Faz o card ocupar toda a largura disponível */
+}
+
+
+
+.card p-floatLabel input {
+    width: 100%; /* Faz o input ocupar toda a largura do card */
+    max-width: 300px; /* Define um limite máximo para a largura do input */
+    padding: 10px; /* Adiciona um padding para melhorar a usabilidade */
+    font-size: 25px; /* Aumenta o tamanho da fonte para melhor legibilidade */
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.nova-caixa {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 60%;
+    box-sizing: border-box;
+    margin: 20px auto;
+    margin-top: 150px;
+    display: flex; /* Adicionei para tornar a caixa flexível */
+    flex-direction: column; /* Coloca os filhos em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+.nova-caixa__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.nova-caixa__description {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
+
+.nova-caixa__title i {
+    font-size: 2rem;
+    margin-right: 10px;
+    color: #0070f3;
+}
+
+.minhas-chaves {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    width: fit-content;
+    margin: 20px auto; /* Adiciona espaçamento acima e abaixo */
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.minhas-chaves__description {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.minhas-chaves i {
+    font-size: 2rem;
+    color: #0070f3;
+    margin-right: 10px;
+}
+
+.minhas-chaves:hover {
+    background-color: #e0e0e0;
+    border-color: #0070f3;
+
+}
+
+.minhas-chaves__description:hover{
+    background-color: #e0e0e0;
+    color: darkblue;
+}
+
 .pix-area {
-    background-color: #ffffff; /* Cor de fundo da área */
-    border-radius: 8px; /* Arredondar os cantos */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
-    padding: 20px; /* Espaçamento interno */
-    margin: 20px; /* Margem externa */
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    width: 60%;
+    box-sizing: border-box;
+    overflow-y: auto;
+    max-height: 300px;
 }
 
 .pix-area__title {
-    font-size: 20px; /* Tamanho do título */
-    font-weight: bold; /* Negrito */
-    color: #0070f3; /* Cor do título */
-    margin-bottom: 10px; /* Espaçamento abaixo do título */
+    font-size: 20px;
+    font-weight: bold;
+    color: #0070f3;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 .pix-area__item {
-    display: flex; /* Usar flexbox para alinhar os itens */
-    justify-content: space-between; /* Espaço entre descrição e valor */
-    margin: 10px 0; /* Espaçamento entre os itens */
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
 }
 
 .pix-area__description {
-    font-size: 16px; /* Tamanho da descrição */
-    color: #333; /* Cor da descrição */
+    font-size: 16px;
+    color: #333;
 }
 
 .pix-area__amount {
-    font-size: 16px; /* Tamanho do valor */
-    color: #0070f3; /* Cor do valor */
-    font-weight: bold; /* Negrito */
+    font-size: 16px;
+    color: #0070f3;
+    font-weight: bold;
 }
 
 .pix-area__date {
-    font-size: 14px; /* Tamanho da data */
-    color: #666; /* Cor da data */
+    font-size: 14px;
+    color: #666;
 }
 
 .pix-area__link {
-    display: block; /* Faz com que o link ocupe toda a largura */
-    text-align: center; /* Centraliza o texto */
-    margin-top: 10px; /* Margem acima do link */
-    color: #0070f3; /* Cor do link */
-    text-decoration: none; /* Remove o sublinhado */
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #0070f3;
+    text-decoration: none;
 }
 
 .pix-area__link:hover {
-    text-decoration: underline; /* Sublinha o link ao passar o mouse */
+    text-decoration: underline;
 }
