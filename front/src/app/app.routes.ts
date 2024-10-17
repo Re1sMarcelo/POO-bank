@@ -4,6 +4,7 @@ import { TelaInicialComponent } from './tela-inicial/tela-inicial.component';
 import { CadastroComponent } from './tela-cadastro/tela-cadastro.component';
 import { TelaExtratoComponent } from './tela-extrato/tela-extrato.component';
 import { TelaPixComponent } from './tela-pix/tela-pix.component';
+import { TelaInvestimentoComponent } from './tela-investimento/tela-investimento.component';
 
 export const routes: Routes = [
     { path: '', component: LoginComponent},
@@ -11,5 +12,6 @@ export const routes: Routes = [
     { path: 'tela-cadastro', component: CadastroComponent},
     { path: 'tela-extrato', component: TelaExtratoComponent},
     { path: 'tela-pix', component: TelaPixComponent},
-    {path: 'tela-login', component: LoginComponent}
+    {path: 'tela-login', component: LoginComponent},
+    { path: 'tela-investimento', component: TelaInvestimentoComponent}
 ];

@@ -23,4 +23,8 @@ export class TelaInicialComponent {
   sair() {
     this.router.navigate(['/tela-login'])
   }
+
+  investir() {
+    this.router.navigate(['/tela-investimento'])
+  }
 }
