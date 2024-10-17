@@ -1,28 +1,26 @@
-<div class="background">
+<div class="background"></div>
 
-    <div class="investment-container">
-    <h2>Previsão de Investimentos</h2>
-  
-    <div class="form-group">
-      <label for="valorAporte">Valor do aporte mensal (R$):</label>
-      <input type="number" id="valorAporte" placeholder="Ex: 1000" />
-    </div>
-  
-    <div class="form-group">
-      <label for="dataInicio">Data inicial do investimento:</label>
-      <input type="date" id="dataInicio" />
-    </div>
-  
-    <div class="form-group">
-      <label for="dataFim">Data final do investimento:</label>
-      <input type="date" id="dataFim" />
-    </div>
-  
-    <button class="calculate-btn" (click)="calculateMonths()">Calcular</button>
-  
-    <div *ngIf="aporteTotal > 0" class="result-container">
-      <h3>Valor acumulado: R$ {{ aporteTotal | number: '1.2-2' }}</h3>
-    </div>
+<div class="investment-container">
+  <h2>Previsão de Investimentos</h2>
+
+  <div class="form-group">
+    <label for="valorAporte">Valor do aporte mensal (R$):</label>
+    <input type="number" id="valorAporte" placeholder="Ex: 1000" />
   </div>
-  
+
+  <div class="form-group">
+    <label for="dataInicio">Data inicial do investimento:</label>
+    <input type="date" id="dataInicio" />
+  </div>
+
+  <div class="form-group">
+    <label for="dataFim">Data final do investimento:</label>
+    <input type="date" id="dataFim" />
+  </div>
+
+  <button class="calculate-btn" (click)="calculateMonths()">Calcular</button>
+
+  <div *ngIf="aporteTotal > 0" class="result-container">
+    <h3>Valor acumulado: R$ {{ aporteTotal | number: '1.2-2' }}</h3>
+  </div>
 </div>
