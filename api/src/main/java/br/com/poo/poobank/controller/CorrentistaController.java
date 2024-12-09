@@ -43,16 +43,16 @@ public class CorrentistaController {
 
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody Map<String, String> loginRequest) {
-        String cpf = loginRequest.get("cpf");
-        String senha = loginRequest.get("senha");
+    String cpf = loginRequest.get("cpf");
+    String senha = loginRequest.get("senha");
 
-        Optional<Correntista> correntistaOpt = correntistaRepository.findByCpfAndSenha(cpf, senha);
-        if (correntistaOpt.isPresent()) {
-            Correntista correntista = correntistaOpt.get();
-            return ResponseEntity.ok(correntista);
-        } else {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("CPF ou senha inválidos");
-        }
+    Optional<Correntista> correntistaOpt = correntistaRepository.findByCpfAndSenha(cpf, senha);
+    if (correntistaOpt.isPresent()) {
+        Correntista correntista = correntistaOpt.get();
+        return ResponseEntity.ok(correntista); // Inclui nome, saldo e outros atributos
+    } else {
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("CPF ou senha inválidos");
     }
+}
 
 }

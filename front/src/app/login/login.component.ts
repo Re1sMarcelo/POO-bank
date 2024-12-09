@@ -22,8 +22,8 @@ export class LoginComponent {
       .post('http://localhost:8080/correntista/login', this.correntista)
       .subscribe({
         next: (response: any) => {
-          // Salva o nome do correntista no localStorage
           localStorage.setItem('nomeCorrentista', response.nome);
+          localStorage.setItem('saldoCorrentista', response.saldo); // Salva o saldo
           alert('Login realizado com sucesso!');
           this.router.navigate(['/tela-inicial']);
         },
