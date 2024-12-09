@@ -1,27 +1,15 @@
-.container {
-    position: fixed; /* Para garantir que ocupe a tela inteira */
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: url('../../../public/background.jpg') no-repeat center center;
-    background-size: cover;
+.loginPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('../../../public/background.jpg') no-repeat center center;
+  background-size: cover;
+  width: 100%;
 }
 
-.titulo {
-    color: #fff;
-    text-align: center;
-    margin-top: 50px; /* Espaçamento superior */
-    font-size: 40px;
-}
-
-/* Contêiner para centralizar o formulário */
-.form-container {
-    display: flex;
-    flex-direction: column; /* Coloca os elementos um abaixo do outro */
-    align-items: center; /* Centraliza horizontalmente */
-    margin: 50px auto; /* Centraliza verticalmente */
-    width: 420px;
+.quadradoLogin {
+  width: 420px;
     background-color: transparent;
     border: 2px solid transparent;
     backdrop-filter: blur(20px);
@@ -31,56 +19,46 @@
     font-family: "Inter", sans-serif;
 }
 
-/* Estilo para os campos de input */
-.campo__cadastro {
-    width: 100%;
-    margin: 10px 0; /* Espaçamento vertical entre os campos */
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid #fff; /* Define a cor da borda como branca */
-    background-color: transparent; /* Fundo transparente */
-    color: #fff; /* Cor do texto */
-    border-radius: 10px; /* Bordas arredondadas */
-    outline: none; /* Remove o outline ao focar */
+
+.quadradoLogin p {
+  color: #fff;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 30px;
 }
 
-/* Estilo para o botão */
-.campo__cadastro__salvar {
-    width: 100%;
-    margin-top: 20px;
-    padding: 10px;
-    font-size: 16px;
-    background-color: yellow; /* Cor de fundo */
-    color: white; /* Cor do texto */
-    border: none;
-    cursor: pointer;
+
+.inputText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
 }
 
-/* Estilo para o botão */
-.campo__cadastro__salvar {
-    width: 100%;
-    margin-top: 20px;
-    padding: 10px;
-    font-size: 22px;
-    background-color: blue; /* Cor de fundo */
-    color: yellow; /* Cor do texto */
-    border: none;
-    cursor: pointer;
 
-    /* Centralizando o texto dentro do botão */
-    display: flex; /* Usa flexbox */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    text-align: center;
-    border-radius: 10px;
+
+.inputText input {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.campo__cadastro__salvar:hover {
-    background-color: yellow;
-    color: blue;
+.inputText button {
+  width: 50%;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: navy;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.campo__cadastro:hover,
-.campo__cadastro:focus {
-    border-color: darkblue; /* Muda a cor da borda ao passar o mouse ou focar */
+.inputText button:hover {
+  background-color: #0056b3;
+  color: yellow;
+
 }
+

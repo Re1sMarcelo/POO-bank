@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+
 
 body {
     height: 100vh;
@@ -39,7 +43,7 @@ body {
     margin-left: 150px;
     font-size: 40px;
     margin-top: 10vh;
-    
+
 }
 
 .cabecalho__conteudo__botao {

@@ -1,19 +1,15 @@
-<div class=loginPage>
+<div class="loginPage">
   <div class="quadradoLogin">
-      <div class="imgLogo">
-          <img width="250px" src="mazebankoflossantos.png" alt="logo1">
-      </div>
 
-      <p>Faça seu cadastro!</p>
+    <p>Faça seu cadastro!</p>
 
-      <Div class=inputText>
-          <input pInputText type="text" [(ngModel)]="dadosCadastrais.cpf" placeholder="CNPJ/CPF">
-          <input pInputText type="text" [(ngModel)]="dadosCadastrais.nome" placeholder="Nome">
-          <input pInputText type="password" [(ngModel)]="dadosCadastrais.senha" placeholder="senha">
-          <input pInputText type="text" [(ngModel)]="dadosCadastrais.chave" placeholder="Chave">
+    <div class="inputText">
+      <input type="text" [(ngModel)]="dadosCadastrais.cpf" placeholder="CPF">
+      <input type="text" [(ngModel)]="dadosCadastrais.nome" placeholder="Nome">
+      <input type="password" [(ngModel)]="dadosCadastrais.senha" placeholder="Senha">
+      <input type="text" [(ngModel)]="dadosCadastrais.chave" placeholder="Chave">
 
-
-          <button pButton (click)="clickSalvar()">Cadastrar</button>
-      </Div>
-   </div>
+      <button  (click)="clickSalvar()" class="botaosave">Cadastrar</button>
+    </div>
+  </div>
 </div>
