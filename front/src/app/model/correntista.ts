@@ -1,6 +1,9 @@
+
 export class Correntista {
-    nome: string = '';
-    cpf_cnpj: number = 0;
-    senha: string = '';
-    chave_pix: string = '';
+  id?: number;
+  nome?: string;
+  cpf?: string;
+  chave?: string;
+  conta?: number;
+  senha?: string;
 }

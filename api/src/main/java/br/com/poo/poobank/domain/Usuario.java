@@ -1,5 +1,7 @@
 package br.com.poo.poobank.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -13,7 +15,7 @@ public class Usuario {
     private String login;
     private String nome;
     private String senha;
-    
+
     public Integer getId() {
         return id;
     }
@@ -40,6 +42,4 @@ public class Usuario {
     }
 
     
-
-    
-}   
+}

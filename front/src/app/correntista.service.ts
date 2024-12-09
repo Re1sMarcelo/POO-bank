@@ -13,7 +13,7 @@ export class CorrentistaService {
   ) { }
 
   public cadastrar(correntista: Correntista): Observable<any> {
-    return this.http.post("http://localhost:3000/correntistas", correntista);
+    return this.http.post("http://localhost:8080/correntista", correntista);
   }
 
 }

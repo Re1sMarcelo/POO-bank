@@ -1,20 +1,44 @@
 <div class="centered-form">
-    <div class="container">
-        <img src="logologin.png" alt="" class="logo">
-        <div class="formulario">
-            <form action="">
-                <h1>Login</h1>
-                <div class="formulario__conteudo">
-                    <input type="text" placeholder="CPF/CNPJ" required>
-                </div>
-                <div class="formulario__conteudo">
-                    <input type="password" placeholder="Senha" required>
-                </div>
-                <div class="botoes">
-                    <button class="w-100 btn btn-lg btn-primary mb-2 fw-bold acessar-conta" type="button" (click)="logar()">Acessar conta</button>
-                    <button type="button" class="criar-conta" (click)="cadastrar()">Criar conta</button>
-                </div>
-            </form>
+  <div class="container">
+    <img src="logologin.png" alt="" class="logo">
+    <div class="formulario">
+      <form>
+        <h1>Login</h1>
+        <div class="formulario__conteudo">
+          <input
+            pInputText
+            type="text"
+            [(ngModel)]="correntista.cpf"
+            name="cpf"
+            placeholder="CNPJ/CPF"
+          />
         </div>
+        <div class="formulario__conteudo">
+          <input
+            pInputText
+            type="password"
+            [(ngModel)]="correntista.senha"
+            name="senha"
+            placeholder="Senha"
+          />
+        </div>
+        <div class="botoes">
+          <button
+            class="w-100 btn btn-lg btn-primary mb-2 fw-bold acessar-conta"
+            type="button"
+            (click)="fazerLogin()"
+          >
+            Acessar conta
+          </button>
+          <button
+            type="button"
+            class="criar-conta"
+            (click)="cadastrar()"
+          >
+            Criar conta
+          </button>
+        </div>
+      </form>
     </div>
+  </div>
 </div>

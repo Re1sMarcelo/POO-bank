@@ -5,6 +5,7 @@ import { CorrentistaService } from '../correntista.service';
 import { Correntista } from '../../app/model/correntista';
 import { FormsModule } from '@angular/forms';
 
+
 @Component({
   selector: 'app-cadastro',
   standalone: true,
@@ -15,15 +16,12 @@ import { FormsModule } from '@angular/forms';
 export class CadastroComponent {
 
   dadosCadastrais = new Correntista();
-
   constructor(
     private service: CorrentistaService
   ) {}
-
   clickSalvar(): void {
     this.service.cadastrar(this.dadosCadastrais).subscribe ( resposta => {
       alert("Cadastrado com sucesso!");
-    })
-  }
-
+    })
+  }
 }
