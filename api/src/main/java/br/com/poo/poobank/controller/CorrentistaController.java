@@ -24,6 +24,9 @@ import br.com.poo.poobank.repository.CorrentistaRepository;
 public class CorrentistaController {
    
     @Autowired
+    private CorrentistaRepository correntistaRepository;
+
+    @Autowired
     private CorrentistaRepository repository;
 
     @GetMapping
@@ -39,17 +42,17 @@ public class CorrentistaController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestBody Correntista loginRequest) { 
-    Optional<Correntista> correntista = repository.findByCpfAndSenha(
-        loginRequest.getCpf(),
-        loginRequest.getSenha()
-    );
+    public ResponseEntity<?> login(@RequestBody Map<String, String> loginRequest) {
+        String cpf = loginRequest.get("cpf");
+        String senha = loginRequest.get("senha");
 
-    if (correntista.isPresent()) {
-        return ResponseEntity.ok(Map.of("sucesso", true));
+        Optional<Correntista> correntistaOpt = correntistaRepository.findByCpfAndSenha(cpf, senha);
+        if (correntistaOpt.isPresent()) {
+            Correntista correntista = correntistaOpt.get();
+            return ResponseEntity.ok(correntista);
+        } else {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("CPF ou senha inválidos");
+        }
     }
-
-    return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Map.of("sucesso", false));
-}
 
 }

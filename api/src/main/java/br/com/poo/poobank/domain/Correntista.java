@@ -15,6 +15,7 @@ public class Correntista {
     private String senha;
     private String chave;
     private Integer conta;
+    private Integer saldo;
     
 
     public Integer getId() {
@@ -52,6 +53,12 @@ public class Correntista {
     }
     public void setConta(Integer conta) {
         this.conta = conta;
+    }
+    public Integer getSaldo() {
+        return saldo;
+    }
+    public void setSaldo(Integer saldo) {
+        this.saldo = saldo;
     } 
 
 }

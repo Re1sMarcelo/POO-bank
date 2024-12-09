@@ -9,8 +9,15 @@ import { Router } from '@angular/router';
   styleUrl: './tela-inicial.component.css'
 })
 export class TelaInicialComponent {
-  
+
   constructor(private router:Router){}
+
+  nomeCorrentista: string = '';
+
+  ngOnInit() {
+    // Recupera o nome do correntista do localStorage
+    this.nomeCorrentista = localStorage.getItem('nomeCorrentista') || '';
+  }
 
   extrato() {
     this.router.navigate(['/tela-extrato'])

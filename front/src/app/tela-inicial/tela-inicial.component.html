@@ -1,6 +1,6 @@
 <header class="cabecalho">
     <img src="logoconta.png" alt="Logo BB cabecalho" class="cabecalho__logo">
-    <h1 class="cabecalho__conteudo">Olá, Marcelo</h1>
+    <h1 class="cabecalho__conteudo">Olá, {{ nomeCorrentista }}</h1>
     <button class="cabecalho__conteudo__botao" (click)="sair()">
         <i class="pi pi-sign-out" style="font-size: 2rem;"></i>
         <span>Sair</span>
@@ -9,7 +9,7 @@
 <div class="container">
     <div class="saldo">
         <h2>Saldo da Conta</h2>
-        <p>R$ 1.000,00</p> 
+        <p>R$ 1.000,00</p>
         <button type="button" (click)="extrato()">Extrato</button>
     </div>
     <div class="caixa">

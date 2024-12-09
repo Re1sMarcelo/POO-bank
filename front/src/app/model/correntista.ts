@@ -6,4 +6,5 @@ export class Correntista {
   chave?: string;
   conta?: number;
   senha?: string;
+  saldo?: number;
 }
