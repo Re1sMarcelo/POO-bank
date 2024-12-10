@@ -1,5 +1,7 @@
 package br.com.poo.poobank.domain;
 
+import java.math.BigDecimal;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,7 +17,7 @@ public class Correntista {
     private String senha;
     private String chave;
     private Integer conta;
-    private Integer saldo;
+    private BigDecimal saldo;
     
 
     public Integer getId() {
@@ -54,11 +56,12 @@ public class Correntista {
     public void setConta(Integer conta) {
         this.conta = conta;
     }
-    public Integer getSaldo() {
+    public BigDecimal getSaldo() {
         return saldo;
     }
-    public void setSaldo(Integer saldo) {
+    public void setSaldo(BigDecimal saldo) {
         this.saldo = saldo;
-    } 
+    }
+    
 
 }

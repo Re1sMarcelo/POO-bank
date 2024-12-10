@@ -22,6 +22,8 @@ export class LoginComponent {
       .post('http://localhost:8080/correntista/login', this.correntista)
       .subscribe({
         next: (response: any) => {
+          // Armazenando id, nome e saldo no localStorage
+          localStorage.setItem('idCorrentista', response.id);
           localStorage.setItem('nomeCorrentista', response.nome);
           localStorage.setItem('saldoCorrentista', response.saldo); // Salva o saldo
           alert('Login realizado com sucesso!');

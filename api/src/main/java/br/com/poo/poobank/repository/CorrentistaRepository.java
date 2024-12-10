@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import br.com.poo.poobank.domain.Correntista;
 
 @Repository
-public interface CorrentistaRepository extends JpaRepository<Correntista, Long> {
+public interface CorrentistaRepository extends JpaRepository<Correntista, Integer> {
     Optional<Correntista> findByCpfAndSenha(String cpf, String senha);
+    
 }
